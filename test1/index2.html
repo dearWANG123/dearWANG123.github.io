@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="robots" content="index,archive,follow">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<link rel="stylesheet" href="css/public.css" type="text/css" >
+<link rel="stylesheet" href="css/index.css" type="text/css" />
+<title>五仁月饼在哪里？？？</title>
+</head>
+<body>
+<div style="display:none;"><img src="images/share.png" alt="" style="width:100%;"></div>
+<div class="page2_wrap">
+<div class="p2_wrap1 p2_wrapub">
+<div class="floatwrap">
+<div class="slide">
+<img src="images/p2_lightwrap.png" alt="" title="" class="flybg">
+<div class="slidecon">
+<ul class="slideconinner">
+<li><img src="images/p2_word1.png" alt="" title="0"></li>
+<li><img src="images/p2_word2.png" alt="" title="1"></li>
+<li><img src="images/p2_word3.png" alt="" title="2"></li>
+<li><img src="images/p2_word4.png" alt="" title="3"></li>
+<li><img src="images/p2_word5.png" alt="" title="4"></li>
+<li><img src="images/p2_word6.png" alt="" title="5"></li>
+</ul>
+</div>
+</div>
+<a href="javascript:;" class="btnl p2_btnpub moveleft"><img src="images/left.png" alt="" title=""></a>
+<a href="javascript:;" class="btnr p2_btnpub moveright"><img src="images/right.png" alt="" title=""></a>
+</div>
+<img src="images/flyrabbit.png" alt="" title="" class="p2_rabbit">
+<a href="javascript:;" class="flybtn" id="fezfBtn"><img src="images/flybtn.png" alt="" title=""></a>
+<a href="javascript:;" class="flybtn" id="returnHome" style="display: none"><img src="images/btnlast.png" alt="" title=""></a>
+</div>
+<div class="p2_wrap2 p2_wrapub main">
+<div class="sharePopbg" style="display:none;"><img src="images/shareimg.png" alt="" title="" class="shareimg"></div>
+<div class="p2_wrap2btnwrap">
+<a href="javascript:;" class="p2_wrap2btn1 share"><img src="images/p3_btn1.png" alt="" title=""></a>
+<a href="javascript:;" class="p2_wrap2btn2 mt10"><img src="images/p3_btn2.png" alt="" title=""></a>
+</div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/jweixin-1.0.0.js"></script>
+<script src="js/weixinshare.js"></script>
+<script src="js/UA.js"></script>
+<script type="text/javascript">
+document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+var dlNum = '0';
+initPage();
+function initPage() {
+	var url = window.location.href.split('num=');
+	if(url.length > 1) {
+		dlNum = url[1].substring(0,1);
+		$('.moveleft').hide();
+		$('.moveright').hide();
+		$('#returnHome').show();
+		$('#fezfBtn').hide();
+	}
+	$(".slideconinner li").eq(dlNum).show().siblings().hide();
+}
+$('#returnHome').click(function(){
+	location.href = location.href.split('zhongqiu/')[0]+'zhongqiu/index.html';
+});
+var weixin = new Weixin({
+	// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+	debug: false,
+	shareTitle: '五仁月饼在哪里？？？',
+//	descContent: '欢庆中秋，喜迎国庆，房天下陪你一起放“价”，还有各种好礼相送',
+	lineLink: location.href,
+	imgUrl: location.href.split('zhongqiu/')[0]+'zhongqiu/' + 'images/share.png'
+});
+var superShare;
+$(".p2_wrap2btn1").click(function(){
+//$(".sharePopbg").show();
+	weixin.updateOps({
+		lineLink: location.href + '?num=' + dlNum
+	});
+	if (superShare) {
+		superShare.url = location.href + '?num=' + dlNum;
+	}
+})
+$(".flybtn").click(function(){
+	dlNum = $(".slideconinner li:visible img").attr('title');
+	$(".slide").addClass("rotateInUpRight");
+	setTimeout(function(){
+	$(".p2_wrap1").addClass("fadeOut");
+	$(".p2_wrap2").addClass("fadeIn");
+	$(".p2_wrap2").css("z-index","1");
+	},1000)
+	});
+var i=0;
+var j=$(".slideconinner li").size()-1;
+ $(".btnr").click(function(){
+		i++;
+		if(i>j){
+		   i=0;
+		};
+		$(".slideconinner li").eq(i).show().siblings().hide();
+		});
+	$(".btnl").click(function(){
+		i--;
+		if(i<0){
+			i=j;
+		};
+		$(".slideconinner li").eq(i).show().siblings().hide();
+});
+$(".sharePopbg").click(function(){
+	$(".sharePopbg").hide();
+});
+</script>
+<script src="http://static.test.soufunimg.com/common_m/m_public/jslib/superShare/1.0.1/superShare.js"></script>
+<script>
+	var config = {
+		// 分享的内容title
+		title: '五仁月饼在哪里？？？',
+		// 分享时的图标
+		image:  location.href.split('zhongqiu/')[0]+'zhongqiu/' + 'images/share.png',
+//	// 分享内容的详细描述
+//	desc: '分享测试的详细描述',
+		// 分享的链接地址
+		url: location.href
+		// 分享的内容来源
+//	form: '房天下'
+	};
+	superShare = new SuperShare(config);
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0" name="viewport" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<title>五仁月饼在哪里？？？</title>
+<link rel="stylesheet" href="css/index.css" type="text/css" />
+</head>
+<body>
+<div class="page page-1-1 page-current" >
+  <div class="wrap">
+  <div class="popcontwrap">
+  <div class="popbg" style="display:none;"></div>
+  <div class="poprightwrap poppubwrap" style="display:none;">
+  <img src="images/poprightbg.png" alt="" title="" class="poprightbg">
+  <img src="images/poprightword.png" alt="" title="" class="poprightword">
+  <a href="index2.html" class="poprightbtn popbtn"><img src="images/poprightbtn.png" alt="" title=""></a>
+  </div>
+  <div class="popfalsewrap poppubwrap" style="display:none;">
+  <img src="images/popfalsebg.png" alt="" title="" class="popfalsebg">
+  <img src="images/popfalseword.png" alt="" title="" class="popfalseword">
+  <a href="#" class="popfalsebtn popbtn"><img src="images/popfalsebtn.png" alt="" title=""></a>
+  </div>
+  </div>
+  <img src="images/biankuang.png" alt="" title="" class="kuang">
+  <img src="images/title.png" alt="" title="" class="pic2_tit">
+  <div class="boardwrap">
+  <img src="images/boardbg.png" alt="" title="" class="baordwrapbg">
+  <div class="board">
+  <ul class="clearfix moonCakewrap">
+   <li class="fir" id="1"><span class="front"></span><b class="back"></b></li>
+   <li class="sec" id="2"><span class="front"></span><b class="back"></b></li>
+   <li class="thir" id="3"><span class="front"></span><b class="back"></b></li>
+   <li class="forth" id="4"><span class="front"></span><b class="back"></b></li>
+   <li class="fivth" id="5"><span class="front"></span><b class="back"></b></li>
+   <li class="sixth" id="6"><span class="front"></span><b class="back"></b></li>
+  </ul>
+  </div>
+  <img src="images/rabbit.png" alt="" title="" class="rabbit">  
+  <img src="images/people.png" alt="" title="" class="chang_e">
+  </div>
+  </div>
+</div>
+<script src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+</script>
+<script type="text/javascript">
+setTimeout(function(){
+	$("ul li span").addClass("active");
+	$("ul li b").addClass("active");
+	},1000)
+//2.turn to front;
+setTimeout(function(){
+	$("ul li span").removeClass("active");
+	$("ul li b").removeClass("active");
+	},3000)
+//rank；
+setTimeout(function(){
+    refresh();
+	},4000)
+setTimeout(function(){
+	$(".kuang").css("z-index","3");
+	},5500)
+function refresh(){ 
+        var arr = new Array(1,2,3,4,5,6);
+        var ul = document.getElementsByTagName('ul')[0];
+        var len1 = arr.length;
+        var len = len1;
+        var index = parseInt(Math.random()*(len1)); 
+        for(var i=0;i<len1;i++)
+        {    
+                ul.appendChild(ul.children[index]);
+                arr.pop(index);
+                len = arr.length;
+                index = parseInt(Math.random()*(len));
+				$('li').addClass("mymove");
+        }}
+    var count = 0;
+    var errorLi;
+	$("ul li").click(
+	function(){
+        count ++;
+		var idnum=$(this).attr("id");
+		var span=$(this).children("span").hasClass("active");
+		var b=$(this).children("b").hasClass("active");
+		if(span==false){
+			$(this).children("span").addClass("active");
+			}
+		else{
+			$(this).children("span").removeClass("active");
+			}
+		if(b==false){
+			$(this).children("b").addClass("active");
+			}
+		else{
+			$(this).children("b").removeClass("active");
+			}
+        if (idnum != 4 && count === 1) {
+            setTimeout(function(){$(".popbg").css('display','block');$(".popfalsewrap").css('display','block');},800);
+            var bArr = $('ul').find('b');
+            for(var i=0;i<6;i++) {
+                var $li = $(bArr[i]).parent('li');
+                if ($li.attr('id') == idnum) {
+                    errorLi = $li;
+                    continue;
+                }
+                $(bArr[i]).css({"background-image":"url(images/wuren.png)"});
+            }
+            } else {
+            setTimeout(function(){$(".popcontwrap").show();$(".popbg").css('display','block');$(".poprightwrap").css('display','block');},800);
+        }
+	});
+	$(".popbtn").click(function(){
+        if (errorLi) {
+            errorLi.find('b').removeClass('active');
+            errorLi.find('span').removeClass('active');
+            errorLi.find('b').css({"background-image":"url(images/wuren.png)"});
+        }
+		$(".popcontwrap").hide();
+        $(".popfalsewrap").hide();
+        $(".poprightwrap").hide()
+	})
+</script>
+</body>
+</html>

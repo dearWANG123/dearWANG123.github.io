@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="robots" content="index,archive,follow">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<link rel="stylesheet" href="css/index.css" type="text/css" />
+<title>五仁月饼在哪里？？？</title>
+</head>
+<body>
+<div style="display:none;"><img src="images/share.png" alt="" style="width:100%;"></div>
+<div class="page0_wrap" style="display:none"> <img src="images/p0_tit.png" alt="" title="" class="page0_tit zoomIn">
+  <div class="p0_people"> <img src="images/p0_people.png" alt="" title="" class="p0_peopleimg"> <span class="jello p0_quest"><img src="images/quest.png" alt="" title="" class=" fadeInlb"></span> </div>
+  <a href="index1.html" class="page0_btn tada"><img src="images/p0_btn.png" alt="" title="" class="fadeIn1"></a> </div>
+<script type="text/javascript">
+document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+
+
+function Imgload(){
+  var imgArr=['images/bg0.jpg','images/p0_tit.png','images/p0_people.png','images/quest.png','images/p0_btn.png'];
+  var n = 0;
+    for(var i = 0; i < imgArr.length; i++) {
+      var img = new Image();
+      img.src = imgArr[i];
+      img.onload = function() {
+        n++;
+        var scale = Math.floor(n / imgArr.length * 100);
+        if(n == imgArr.length) {
+          //加载logo2
+          $(".page0_wrap").show();
+        }
+      }
+    }
+}
+Imgload();
+</script>
+</body>
+</html>

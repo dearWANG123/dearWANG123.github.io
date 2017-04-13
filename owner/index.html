@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0" name="viewport" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<title>业主大会邀请函</title>
+<style>
+/*public*/
+* {margin:0;padding:0;}
+html {font-size:62.5%;}
+body {width: 100%;font-family:'Microsoft Yahei', 'Arial';color: #333;-webkit-touch-callout: inherit;-webkit-user-select:auto;overflow:hidden;}
+img {vertical-align:middle;}
+a {color:#fff;text-decoration: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+ul, ol, li {list-style: none;}
+.hide {display:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.page {width:100%;height:100%;position:absolute;text-align:center;overflow:hidden;}
+.page .wrap {height:100%;position: relative;}
+.page-1-1 {background:#000; background-size:100% 100%; }
+.page-2-1{ background:url(images/page2-bg.jpg) no-repeat; background-size:100% 100%;}
+.page-current {z-index:1;}
+.upBtn {height:auto;width:20px;position:absolute;left:50%;top:93%;margin-left:-10px;z-index:10}
+img {width:100%;}
+/* move from / to  */
+.pt-page-moveToLeft { -webkit-animation: moveToLeft .6s ease both;animation: moveToLeft .6s ease both;}
+.pt-page-moveToRight {-webkit-animation: moveToRight .6s ease both; animation: moveToRight .6s ease both;}
+.pt-page-moveToTop {-webkit-animation: moveToTop .6s ease both; animation: moveToTop .6s ease both;}
+.pt-page-moveFromTop {-webkit-animation: moveFromTop .6s ease both;animation: moveFromTop .6s ease both;}
+.pt-page-moveToBottom {-webkit-animation: moveToBottom .6s ease both; animation: moveToBottom .6s ease both;}
+.pt-page-moveFromBottom {-webkit-animation: moveFromBottom .6s ease both;animation: moveFromBottom .6s ease both;}
+/*  iconUp & circle */
+.pt-page-moveIconUp {-webkit-animation: moveIconUp ease 1.5s both infinite;animation: moveToBottom ease 1.5s both infinite;}
+/********************************* keyframes **************************************/
+/* move from / to  */
+@-webkit-keyframes moveToLeft {from {}to {-webkit-transform: translateX(-240px);}}
+@keyframes moveToLeft {from {}to {-webkit-transform: translateX(-240px);transform: translateX(-240px);}}
+@-webkit-keyframes moveToRight {from {}to {-webkit-transform: translateX(240px);}}
+@keyframes moveToRight {from {}to {-webkit-transform: translateX(240px);transform: translateX(240px);}}
+@-webkit-keyframes moveToTop {from {}to {-webkit-transform: translateY(-100%);}}
+@keyframes moveToTop {from {}to{-webkit-transform: translateY(-100%);transform: translateY(-100%);}}
+@-webkit-keyframes moveFromTop {from {-webkit-transform: translateY(-100%);}}
+@keyframes moveFromTop {from {-webkit-transform: translateY(-100%);transform: translateY(-100%);}}
+@-webkit-keyframes moveToBottom {from {}to {-webkit-transform: translateY(100%);}}
+@keyframes moveToBottom {from {}to {-webkit-transform: translateY(100%);transform: translateY(100%);}}
+@-webkit-keyframes moveFromBottom {from {-webkit-transform: translateY(100%);}}
+@keyframes moveFromBottom {from {-webkit-transform: translateY(100%);transform: translateY(100%);}}
+@-webkit-keyframes moveIconUp {0% {-webkit-transform: translate3d(0, 100%, 0);opacity:0;}50% {-webkit-transform: translate3d(0, 0, 0);opacity:1;}100%{-webkit-transform: translate3d(0, -100%, 0);opacity:0;}}
+@keyframes moveIconUp {0%{-webkit-transform:translate3d(0, 100%, 0);transform:translate3d(0, 100%, 0);opacity:0;}50% {-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);opacity:1;}100% {-webkit-transform:translate3d(0, -100%, 0);transform:translate3d(0, -100%,0);opacity:0;}}
+/*index start*/
+/*page1*/
+.logo img{ width:30%; position:absolute; top:5%; left:35%;  z-index:100; }
+.audiencewrap{ width:100%; height:40%; position:absolute; bottom:0%; left:0%; z-index:100;}
+.audience .aud{ position:absolute; bottom:0%; left:0%;}
+.audience .aud2{/* display:none;*/}
+.wordwrap{ width:100%; height:25%; position:absolute;}
+.wordwrap img{ position:absolute;}
+.wordwrap .word1{ width:25%; top:30%; left:10%; }
+.wordwrap .word2{ width:20%; top:-60%; left:26%; }
+.wordwrap .word3{ width:19%; top:-30%; left:55%; }
+.wordwrap .word4{ width:18%;  top:70%; right:10%;}
+.wordwrap .word5{ width:20%;  top:50%; left:45%;}
+.screenwrap{ width:100%; height:100%; position:absolute; z-index:10;}
+.screenwrap .screen1,.screenwrap .screen2{ width:50%; height:100%; position:absolute;}
+.screenwrap .screen1 img,.screenwrap .screen2 img{ width:100%; height:100%;}
+.screenwrap .screen1{ left:0%; top:0%;}
+.screenwrap .screen2{ left:50%; top:0%;}
+.screendark{ width:100%; height:100%; position:absolute; top:0%; left:0%; background:rgba(0,0,0,0.5);}
+.lastscreen{ position:absolute; top:0%; left:0%; width:100%; height:100%; z-index:5;}
+.lastbg,.lastbg img{ width:100%; height:100%;z-index:1;}
+.rabbit{ position:absolute; width:40%; height:60%;top:18%; left:34%; z-index:5;}
+.rabbit img{ width:100%; height:100%; position:absolute;}
+.rabbitstop{width:140% !important; height:100% !important; top:0%; left:-20%}
+.rabbitswing{ width:140% !important; top:0%; left:-20%;}
+.hf{ width:100%; z-index:10; position:absolute; bottom:43%; left:0;}
+.lightwrap{ width:100%;}
+.followlight{ width:100%; position:absolute; top:0%; left:0%; z-index:2;}
+.toplight{width:100%; position:absolute; top:0%; left:0%; z-index:2;}
+.spotlightwrap { width:100%; height:24%;position:absolute; bottom:23%; left:0%;}
+.spotlight1{width:100%; height:60%;background: url(images/light_dian.png) no-repeat; background-size:100% 100%; position:absolute; top:30%; left:0%;}
+.tuwalkwrap{width:100%;height:100%;position:absolute;top:0%;left:0%;}
+.btn{ width:60%; position:absolute; bottom:13%; left:20%; z-index:101;}
+/*index end*/
+
+/*css3 animation*/
+@media screen and (max-width:320px) {.rabbit{ height:57%;width:32%;}}
+/*animation*/	
+/*logo animation*/	
+@-webkit-keyframes zoomIn {
+0%{opacity: 0;-webkit-transform: scale3d(.3, .3, .3);transform: scale3d(.3, .3, .3);}
+50% {opacity: 1;}}
+@keyframes zoomIn {
+0%{opacity: 0;-webkit-transform: scale3d(.3, .3, .3);transform: scale3d(.3, .3, .3);}
+50% {opacity: 1;}}
+.zoomIn{-webkit-animation:zoomIn 0.5s both;animation:zoomIn 0.5s both;}
+/*word animation*/	
+ @-webkit-keyframes shake {
+ 0%{-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+ 10%{-webkit-transform: translate3d(1px, 2px, 0);transform: translate3d(1px, 2px, 0);}
+ 40%{-webkit-transform: translate3d(0px, 1px, 0);transform: translate3d(0px, 1px, 0);}
+ 60%{-webkit-transform: translate3d(-3px, 0, 0);transform: translate3d(-3px, 0, 0);}
+ 80%{-webkit-transform: translate3d(2px,3px, 0);transform: translate3d(2px, 3px, 0);}
+}
+ @keyframes shake {
+ 0%{-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+ 10%{-webkit-transform: translate3d(1px, 2px, 0);transform: translate3d(1px, 2px, 0);}
+ 40%{-webkit-transform: translate3d(0px, 1px, 0);transform: translate3d(0px, 1px, 0);}
+ 60%{-webkit-transform: translate3d(-3px, 0, 0);transform: translate3d(-3px, 0, 0);}
+ 80%{-webkit-transform: translate3d(0px, 0, 0);transform: translate3d(0px, 0, 0);}
+}
+.shake{-webkit-animation:shake 1s infinite;animation: shake 1s infinite;}
+.shake1{-webkit-animation:shake 1s infinite .1s;animation: shake 1s infinite .1s;}
+.shake2{-webkit-animation:shake 0.5s infinite .3s;animation: shake 0.5s infinite .3s;}
+.shake3{-webkit-animation:shake 0.8s infinite .2s;animation: shake 0.8s infinite .2s;}
+.shake4{-webkit-animation:shake 0.6s infinite .4s;animation: shake 0.6s infinite .4s;}
+/*show*/	
+@-webkit-keyframes fadeIn{0%{opacity: 0;}100%{opacity: 1;}}
+@keyframes fadeIn {0%{opacity: 0;}100%{opacity: 1;}}
+.fadeIn{-webkit-animation:fadeIn .1s both 3s;animation:fadeIn .1s both 3s;}
+.fadeIn1{-webkit-animation:fadeIn .5s both 2.5s;animation:fadeIn .5s both 2.5s;}
+.fadeIn2{-webkit-animation:fadeIn 1.5s both 4s;animation:fadeIn 1.5s both 4s;}
+.fadeIn3{-webkit-animation:fadeIn .1s both 6.4s;animation:fadeIn .1s both 6.4s;}
+.fadeIn4{-webkit-animation:fadeIn .1s both 12.8s;animation:fadeIn .1s both 12.8s;}
+.fadeIn5{-webkit-animation:fadeIn .1s both 12s;animation:fadeIn .1s both 12s;}
+.fadeIn6{-webkit-animation:fadeIn .5s both 13s;animation:fadeIn .5s both 13s;}
+.fadeIn7{-webkit-animation:fadeIn 1s both 14s;animation:fadeIn 1s both 14s;}
+/*hide*/	
+@-webkit-keyframes fadeOut{0%{opacity:1;}100%{opacity: 0;}}
+@keyframes fadeOut {0%{opacity: 1;}100%{opacity: 0;}}
+.fadeOut{-webkit-animation:fadeOut .1s both 1.5s;animation:fadeOut .1s both 1.5s;}
+.fadeOut1{-webkit-animation:fadeOut .1s both 6.5s;animation:fadeOut .1s both 6.5s;}
+.fadeOut2{-webkit-animation:fadeOut .1s both 3s;animation:fadeOut .1s both 3s;}
+.fadeOut3{-webkit-animation:fadeOut .1s both 13s;animation:fadeOut .1s both 13s;}
+.fadeOut4{-webkit-animation:fadeOut .1s both 11.5s;animation:fadeOut .1s both 11.5s;}
+/*screen1*/	
+@-webkit-keyframes screen1{100%{left:-50%;}}
+@keyframes screen1 {100%{left:-50%;}}
+.screen1mv{-webkit-animation:screen1 1.5s both 2s;animation:screen1 1.5s both 2s;}
+/*screen2*/	
+@-webkit-keyframes screen2{100%{left:100%;}}
+@keyframes screen2 {100%{left:100%;}}
+.screen2mv{-webkit-animation:screen2 1.5s both 2s;animation:screen2 1.5s both 2s;}
+/*rabbit show*/	
+@-webkit-keyframes tuwalk{0%{-webkit-transform:scale3d(0.5,0.5,1) translate3D(-5%,-20%,0);-webkit-transform-origin:50% 50%;}}
+@keyframes tuwalk {0%{-webkit-transform:scale3d(0.5,0.5,1) translate3D(-5%,-20%,0);-webkit-transform-origin:50% 50%;}}
+.tuwalk{-webkit-animation:tuwalk 2s both 3.5s;animation:tuwalk 2s both 3.5s;}
+/*spotlight*/
+@-webkit-keyframes spotlight{
+0%{background: url(images/light_dian.png) no-repeat;background-size: 100% 100%;}
+100%{background: url(images/light_dian1.png) no-repeat;background-size: 100% 100%;}
+}
+@keyframes spotlight {
+0%{background: url(images/light_dian.png) no-repeat;background-size: 100% 100%;}
+100%{background: url(images/light_dian1.png) no-repeat;background-size: 100% 100%;}
+}
+.spotlight{-webkit-animation:spotlight 2s both 12s infinite;animation:spotlight 2s both 12s infinite;}
+/*btn*/
+@-webkit-keyframes tada {
+0%{-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}
+10%, 20% {-webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);}
+30%, 50%, 70%, 90% {-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);}
+40%, 60%, 80%{-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);}
+100%{-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}}
+@keyframes tada {
+0%{-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}
+10%, 20% {-webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);}
+30%, 50%, 70%, 90% {-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);}
+40%, 60%, 80% {-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);}
+100%{-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}}
+.tada{-webkit-animation:tada 1s both 14.5s ;animation:tada 1s both 14.5s;}
+</style>
+</head>
+<body>
+<div style=" width:100%; height:100%; display:none;"><img src="images/share.jpg" alt="" title=""></div>
+<div class="page page-1-1 page-current" >
+  <div class="wrap">
+  <div class="logo"><img src="images/logo.png" alt="" title="" class="zoomIn"></div>
+  <div class="audiencewrap">
+  <div class="wordwrap fadeOut2">
+  <img src="images/word1.png" alt="" title="" class="word1 shake">
+  <img src="images/word2.png" alt="" title="" class="word2 shake1">
+  <img src="images/word3.png" alt="" title="" class="word3 shake2">
+  <img src="images/word4.png" alt="" title="" class="word4 shake3">
+  <img src="images/word5.png" alt="" title="" class="word5 shake4">
+  </div>
+  <div class="audience">
+  <img src="images/people1.png" alt="" title="" class="aud aud1">
+  <img src="images/people2.png" alt="" title="" class="aud aud2 fadeIn">
+  </div>
+  </div>
+  <div class="screenwrap">
+  <div class="screen1 screen1mv">
+  <img src="images/mulightleft.jpg" alt="" title="">
+  </div>
+  <div class="screen2 screen2mv">
+  <img src="images/mulightright.jpg" alt="" title="">
+  </div>
+  <div class="screendark fadeOut"></div>
+  </div>
+  <div class="lastscreen">
+  <div class="lastbg"><img src="images/bluebg.jpg" alt="" title=""></div>
+  <div class="rabbit">
+  <img src="images/tustop.png" alt="" title="" class="rabbitstop fadeIn4">
+  <div class="fadeOut1 tuwalkwrap"><div class="fadeIn2 tuwalkwrap"><img src="images/walk.gif" alt="" title="" class="tuwalk tuwalkwrap"></div></div>
+  <div class="fadeOut3"><img src="images/swing5.gif" alt="" title="" class="rabbitswing fadeIn3"></div>
+  </div>
+  <img src="images/hf.png" alt="" title="" class="hf fadeIn6">
+  <div class="lightwrap">
+  <div class="fadeOut4"><img src="images/zgd.jpg" alt="" title="" class="followlight fadeIn1"></div>
+  <img src="images/light.png" alt="" title="" class="toplight fadeIn5">
+  <div class="spotlightwrap fadeIn5">
+  <div class="spotlight spotlight1"></div>
+  </div>
+  </div>
+  </div>  
+  <a href="#" class="btn tada"><img src="images/btn.png" alt="" title="" class="fadeIn7"></a>
+  </div>
+  <img class="upBtn pt-page-moveIconUp" src="images/icon_up.png"> 
+</div>
+</body>
+</html>
